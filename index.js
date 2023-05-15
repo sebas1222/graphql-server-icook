@@ -59,7 +59,8 @@ app.use(
   })
 );
 
+const port = process.env.PORT || 4000;
 // Modified server startup
-await new Promise((resolve) => httpServer.listen({ port: 3000 }, resolve));
+await new Promise((resolve) => httpServer.listen(resolve));
 
-console.log(`🚀 Server ready at http://localhost:3000/`);
+console.log(`🚀 Server ready at http://localhost:${port}/`);
