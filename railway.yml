@@ -1,0 +1,6 @@
+envs:
+  - MONGODB_ATLAS_URI
+
+commands:
+  - npm install
+  - npm start
