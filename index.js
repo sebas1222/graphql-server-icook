@@ -49,7 +49,7 @@ const server = new ApolloServer({
 await server.start();
 
 app.use(
-  "/",
+  "/graphql",
   cors(),
   bodyParser.json(),
   // expressMiddleware accepts the same arguments:
@@ -63,4 +63,4 @@ const port = process.env.PORT || 4000;
 // Modified server startup
 await new Promise((resolve) => httpServer.listen(resolve));
 
-console.log(`🚀 Server ready at http://localhost:${port}/`);
+console.log(`🚀 Server ready at http://localhost:${port}/graphql`);
