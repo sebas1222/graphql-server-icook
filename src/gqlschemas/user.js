@@ -168,7 +168,7 @@ export const resolvers = {
             },
           }
         );
-        const updatedUser = User.findOne({ _id: args.idUser })
+        const updatedUser = User.findOne({ _id: context.currentUser._id })
           .populate("followers")
           .populate("following");
         return updatedUser;
